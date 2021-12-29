@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Главная</title>
+  <title>Контакты</title>
   <meta name="description" content="">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -320,126 +320,59 @@
     </div>
   </header>
   <main class="main">
-    <div class="section itop p-0">
-      <div class="itop__slider swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="i/slide01.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="i/slide01.png" alt="">
-          </div>
-        </div>
-        <div class="itop__nav">
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ol>
+      </div>
+    </nav>
+    <div class="section main__title">
+      <div class="container">
+        <h1>Контакты</h1>
+      </div>
+    </div>
+    <div class="main__content pt-0">
+      <div class="map">
+
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A55e90fb07eb8834c3c172c1a81babe9229221a52205cb00fe6c91db879f59697&amp;source=constructor" width="100%" height="521" frameborder="0"></iframe>
+        <!-- <img src="i/map.png" alt=""> -->
+        <div class="map__wrap">
           <div class="container">
-            <div class="swiper-navigation">
-              <div class="swiper-button-prev">
-                <svg width="31" height="20" viewBox="0 0 31 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M30.6924 10.2029L0.876892 10.2029M0.876892 10.2029L9.82154 1.2583M0.876892 10.2029L9.82154 19.1476" stroke="#2AB346"/>
-                </svg>
-              </div>
-              <div class="swiper-button-next">
-                <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.88916 10.2028H30.7047M30.7047 10.2028L21.76 19.1475M30.7047 10.2028L21.76 1.25817" stroke="#2AB346"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section iactual">
-      <div class="container">
-        <div class="row g-0 -title-row">
-          <div class="section__title">актуальные товары</div>
-          <div class="iactual__nav -static-nav">
-              <div class="swiper-navigation">
-                <div class="swiper-button-prev">
-                  <svg width="31" height="20" viewBox="0 0 31 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.6924 10.2029L0.876892 10.2029M0.876892 10.2029L9.82154 1.2583M0.876892 10.2029L9.82154 19.1476" stroke="#2AB346"/>
-                  </svg>
-                </div>
-                <div class="swiper-button-next">
-                  <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.88916 10.2028H30.7047M30.7047 10.2028L21.76 19.1475M30.7047 10.2028L21.76 1.25817" stroke="#2AB346"/>
-                  </svg>
+            <div class="row -tabs-row g-0">
+              <div class="map__tabs">
+                <div class="map-text -fs-12">Выберите филиал</div>
+                <div class="city">
+                  <a href="#smr" class="city-item active" >Самара</a>
+                  <a href="#ttl" class="city-item">Тольятти</a>
+                  <a href="#ufa" class="city-item">Уфа</a>
+                  <a href="#orb" class="city-item">Оренбург</a>
+                  <a href="#uln" class="city-item">Ульяновск</a>
+                  <a href="#chb" class="city-item">Чебоксары</a>
+                  <a href="#krd" class="city-item">Краснодар</a>
+                  <a href="#ekb" class="city-item">Екатеринбург</a>
+                  <a href="#srt" class="city-item">Саратов</a>
+                  <a href="#ijv" class="city-item">Ижевск</a>
+                  <a href="#sfr" class="city-item">Симферополь</a>
+                  <a href="#yrs" class="city-item">Ярославль</a>
                 </div>
               </div>
-          </div>
-        </div>
-        <div class="iactual__slider swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Новинка</div>
-                <a href="#" class="product-img"><img src="i/product01.png" alt=""></a>
-                <div class="product-title">Пистолет для монтажной пены REXANT</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">579 ₽</div>
+              <div class="city-content">
+                <div class="city-content-close"></div>
+                <div class="city-info show" id="smr">
+                  <div class="city-title -fs-30">Центральный офис в Самаре</div>
+                  <div class="city-address">443080, Самара, ул. Санфировой, 95</div>
+                  <div class="city-phone"><a href="tel:89297117200">8 (929) 711 72 00</a></div>
+                  <div class="city-mail"><a href="mailto:market@sputniktv.tv">market@sputniktv.tv</a></div>
+                  <div class="city-wtime">
+                    <div class="wtime-text">Время работы:</div>
+                    <div class="wtime-info">
+                      Пн-Пт 9:00 – 19:00<br>Сб 10:00 – 16:00
+                    </div>
                   </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Спец. предложение</div>
-                <a href="#" class="product-img"><img src="i/product02.png" alt=""></a>
-                <div class="product-title">Антенна комнатная Волжанка активная TWIN USB 3м с присоской</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">497 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Новинка</div>
-                <a href="#" class="product-img"><img src="i/no-photo.png" alt=""></a>
-                <div class="product-title">Эвотор 7.3 Смарт-терминал без ФН</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">21 500 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Новинка</div>
-                <a href="#" class="product-img"><img src="i/product03.png" alt=""></a>
-                <div class="product-title">Кабель электрический ГОСТ 31996-2012 ВВГ- нг(А)-LS 4x1,5: (100м)</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">78 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Новинка</div>
-                <a href="#" class="product-img"><img src="i/product03.png" alt=""></a>
-                <div class="product-title">Кабель электрический ГОСТ 31996-2012 ВВГ- нг(А)-LS 4x1,5: (100м)</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">78 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
+                  <div class="city-btn">
+                    <a href="#" class="btn btn-secondary">Написать нам</a>
                   </div>
                 </div>
               </div>
@@ -447,204 +380,12 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="section isrec">
-      <div class="container">
-        <div class="row g-0 -title-row">
-          <div class="section__title">Спецпредложения</div>
-          <div class="ispec__nav -static-nav">
-              <div class="swiper-navigation">
-                <div class="swiper-button-prev">
-                  <svg width="31" height="20" viewBox="0 0 31 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.6924 10.2029L0.876892 10.2029M0.876892 10.2029L9.82154 1.2583M0.876892 10.2029L9.82154 19.1476" stroke="#2AB346"/>
-                  </svg>
-                </div>
-                <div class="swiper-button-next">
-                  <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.88916 10.2028H30.7047M30.7047 10.2028L21.76 19.1475M30.7047 10.2028L21.76 1.25817" stroke="#2AB346"/>
-                  </svg>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div class="ispec__slider swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Спец. предложение</div>
-                <a href="#" class="product-img"><img src="i/product01.png" alt=""></a>
-                <div class="product-title">Пистолет для монтажной пены REXANT</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">579 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Спец. предложение</div>
-                <a href="#" class="product-img"><img src="i/product02.png" alt=""></a>
-                <div class="product-title">Антенна комнатная Волжанка активная TWIN USB 3м с присоской</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">497 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Спец. предложение</div>
-                <a href="#" class="product-img"><img src="i/no-photo.png" alt=""></a>
-                <div class="product-title">Эвотор 7.3 Смарт-терминал без ФН</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">21 500 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Спец. предложение</div>
-                <a href="#" class="product-img"><img src="i/product03.png" alt=""></a>
-                <div class="product-title">Кабель электрический ГОСТ 31996-2012 ВВГ- нг(А)-LS 4x1,5: (100м)</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">78 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-item">
-                <div class="product-mark -fs-12 -noto-m">Новинка</div>
-                <a href="#" class="product-img"><img src="i/product03.png" alt=""></a>
-                <div class="product-title">Кабель электрический ГОСТ 31996-2012 ВВГ- нг(А)-LS 4x1,5: (100м)</div>
-                <div class="row -product-row">
-                  <div class="col-6 col-md-auto">
-                    <div class="product-price -fs-30 -noto-sb">78 ₽</div>
-                  </div>
-                  <div class="col-6 col-md-auto">
-                    <button class="btn btn-buy"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      
     </div>
 
-    <div class="section inews">
-      <div class="container">
-        <div class="row g-0 -title-row">
-          <div class="section__title">новости и обзоры</div>
-          <div class="inews__nav -static-nav">
-              <div class="swiper-navigation">
-                <div class="swiper-button-prev">
-                  <svg width="31" height="20" viewBox="0 0 31 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.6924 10.2029L0.876892 10.2029M0.876892 10.2029L9.82154 1.2583M0.876892 10.2029L9.82154 19.1476" stroke="#2AB346"/>
-                  </svg>
-                </div>
-                <div class="swiper-button-next">
-                  <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.88916 10.2028H30.7047M30.7047 10.2028L21.76 19.1475M30.7047 10.2028L21.76 1.25817" stroke="#2AB346"/>
-                  </svg>
-                </div>
-              </div>
-          </div>
-        </div>
-        </div>
-        <div class="container-fluid">
-          <div class="inews__slider swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#" class="news-item">
-                  <span class="news-img">
-                    <img src="i/news01.png" alt="">
-                  </span>
-                  <span class="news-title -fs-18">Беспроводные наушники - эра нового направления!</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="news-item">
-                  <span class="news-img">
-                    <img src="i/news02.png" alt="">
-                  </span>
-                  <span class="news-title -fs-18">Беспроводные наушники - эра нового направления!</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="news-item">
-                  <span class="news-img">
-                    <img src="i/news03.png" alt="">
-                  </span>
-                  <span class="news-title -fs-18">Беспроводные наушники - эра нового направления!</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="news-item">
-                  <span class="news-img">
-                    <img src="i/news04.png" alt="">
-                  </span>
-                  <span class="news-title -fs-18">Беспроводные наушники - эра нового направления!</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="news-item">
-                  <span class="news-img">
-                    <img src="i/news05.png" alt="">
-                  </span>
-                  <span class="news-title -fs-18">Беспроводные наушники - эра нового направления!</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="news-item">
-                  <span class="news-img">
-                    <img src="i/news05.png" alt="">
-                  </span>
-                  <span class="news-title -fs-18">Беспроводные наушники - эра нового направления!</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section mailing -bg-green">
-      <div class="container">
-        <div class="row -mailing-row">
-          <div class="col-md-6 col-lg-6 col-xl-auto">
-            <div class="form__text -mail-icon">Подпишитесь на нашу рассылку</div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-auto">
-            <form action="" class="form">
-              <div class="form-row">
-                <input type="text" class="form-control" placeholder="E-mail">
-                <button type="submit" class="btn btn-primary">Подписаться</button>
-              </div>
-            </form>
-          </div>
-          <div class="col-lg-6 col-xl-auto">
-            <div class="form__info -fs-12">Нажимая кнопку «Подписаться» вы даете согласие на обработку персональных данных </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
   </main>
   <footer class="footer -bg-black">
     <div class="container">

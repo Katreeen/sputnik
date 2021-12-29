@@ -160,6 +160,38 @@ document.addEventListener("DOMContentLoaded", () => {
   togglerSearch.addEventListener('click', () => {
       searchForm.classList.toggle('show');
   });
+
+  // map tabs
+  const city = document.querySelector('.city'),
+    cityItems = city.querySelectorAll('.city-item'),
+    cityInfo = document.querySelectorAll('.city-info');
+  
+  cityItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      cityInfo.forEach(i => {
+        i.classList.remove('show');
+      });
+      const cityId = e.target.getAttribute('href');
+      console.log(cityId);
+
+      document.querySelector(cityId).classList.add('show');
+    });
+  });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   // const ireviews = new Swiper('.ireviews__carousel', {
   //   loop: false,
