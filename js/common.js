@@ -164,21 +164,149 @@ document.addEventListener("DOMContentLoaded", () => {
   // map tabs
   const city = document.querySelector('.city'),
     cityItems = city.querySelectorAll('.city-item'),
-    cityInfo = document.querySelectorAll('.city-info');
+    cityInfo = document.querySelectorAll('.city-info'),
+    closeBtn = document.querySelector('.city-content-close'),
+    cityContent = document.querySelector('.city-content');
   
   cityItems.forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
+      for(let i = 0; i < city.children.length; i++){
+        city.children[i].classList.remove('active');
+      }
       cityInfo.forEach(i => {
         i.classList.remove('show');
       });
+      cityContent.classList.remove('hidden');
       const cityId = e.target.getAttribute('href');
-      console.log(cityId);
-
+      
+      e.target.classList.add('active');
       document.querySelector(cityId).classList.add('show');
+
+      const coord = e.target.getAttribute('data-coords').split(',');
+      myMap.setZoom(10);
+      myMap.panTo([coord], {
+        duration: 500,
+        flying: true
+      });
+      
     });
   });
+  closeBtn.addEventListener('click', () => {
+    cityContent.classList.add('hidden');
+  });
   
+
+  if("#map"){
+    ymaps.ready(init);
+      var myMap; 
+      function init () {
+      myMap = new ymaps.Map("map", {
+          center: [53.2202280712095,50.19448949999988], 
+          behaviors: ['default', 'scrollZoom'], 
+          zoom: 8 
+      });
+        
+      myMap.geoObjects
+        .add(new ymaps.Placemark([53.2202280712095, 50.19448949999988], {
+          balloonContent: 'г.Самара, ул. Санфировой, д. 95',
+          iconCaption: 'Центральный офис'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([53.505201570986415, 49.39027249999998], {
+          balloonContent: 'г.Тольятти, ул. Родины, д. 3',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([54.716450569949345,55.97831950000001], {
+          balloonContent: 'г. Уфа, ул. Айская, д. 37',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([51.798798572224264,55.082052000000004], {
+          balloonContent: 'г. Оренбург, ул. Юркина, д. 11А, кор. 2',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([54.328806070274894,48.3958735], {
+          balloonContent: 'г. Ульяновск, ул. Федерации, д. 89а',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([56.15244456859227,47.19452049999997], {
+          balloonContent: 'г. Чебоксары, Приволжский бульвар, д. 4/1',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([45.031432074585005,39.057382999999945], {
+          balloonContent: 'г. Краснодар, ул. Лизы Чайкиной, д. 14',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([56.84335306787346,60.66437199999993], {
+          balloonContent: 'г. Екатеринбург, ул. Малышева, д.145Б',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([54.91871556976173,60.334564499999985], {
+          balloonContent: 'г. Саратов, 1 Пугачевский поселок, д. Б-2',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([56.8352045678827,53.25901099999998], {
+          balloonContent: 'г. Ижевск, ул. Орджоникидзе, д. 1А, корп. 6',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([44.92278457458647,34.08619599999999], {
+          balloonContent: 'г. Симферополь, ул. Миллера д.4',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }))
+        .add(new ymaps.Placemark([57.641220566984686,39.81708849999999], {
+          balloonContent: 'г. Ярославль, ул. Юности д. 22',
+          iconCaption: 'Филиал'
+        }, {
+          preset: 'islands#icon',
+          iconCaptionMaxWidth: '200',
+          iconColor: '#2AB346'
+        }));
+    }
+  }
+
 
 
 
