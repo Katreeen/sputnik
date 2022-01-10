@@ -762,6 +762,7 @@ ul.ul li:last-child{padding-bottom: 0;}
   .ifeedback__wrap{padding-left: 20px; padding-right: 20px;}
   .city-content{box-shadow: 0px 10px 10px rgb(85 85 85 / 15%);}
   .num-item{flex-wrap: wrap;}
+  .num-icon{padding-right: 0; width: 100%;}
 
 }
 @media(max-width: 767px){
