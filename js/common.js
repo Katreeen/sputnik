@@ -162,40 +162,66 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // map tabs
-  const city = document.querySelector('.city'),
-    cityItems = city.querySelectorAll('.city-item'),
-    cityInfo = document.querySelectorAll('.city-info'),
-    closeBtn = document.querySelector('.city-content-close'),
-    cityContent = document.querySelector('.city-content');
+  if (document.querySelector('.city')) {
+    const city = document.querySelector('.city'),
+      cityItems = city.querySelectorAll('.city-item'),
+      cityInfo = document.querySelectorAll('.city-info'),
+      closeBtn = document.querySelector('.city-content-close'),
+      cityContent = document.querySelector('.city-content');
   
-  cityItems.forEach(item => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-      for(let i = 0; i < city.children.length; i++){
-        city.children[i].classList.remove('active');
-      }
-      cityInfo.forEach(i => {
-        i.classList.remove('show');
-      });
-      cityContent.classList.remove('hidden');
-      const cityId = e.target.getAttribute('href');
+    cityItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        for (let i = 0; i < city.children.length; i++) {
+          city.children[i].classList.remove('active');
+        }
+        cityInfo.forEach(i => {
+          i.classList.remove('show');
+        });
+        cityContent.classList.remove('hidden');
+        const cityId = e.target.getAttribute('href');
       
-      e.target.classList.add('active');
-      document.querySelector(cityId).classList.add('show');
+        e.target.classList.add('active');
+        document.querySelector(cityId).classList.add('show');
 
-      const coord = e.target.getAttribute('data-coords').split(',');
-      myMap.setZoom(10);
-      myMap.panTo([coord], {
-        duration: 500,
-        flying: true
-      });
+        const coord = e.target.getAttribute('data-coords').split(',');
+        myMap.setZoom(10);
+        myMap.panTo([coord], {
+          duration: 500,
+          flying: true
+        });
       
+      });
     });
+    closeBtn.addEventListener('click', () => {
+      cityContent.classList.add('hidden');
+    });
+  } 
+
+  const catalogFilter = document.querySelector('.catalog__filter'),
+    filterTitle = document.querySelectorAll('.filter-title');
+  filterTitle.forEach(item => {
+    item.addEventListener('click', (e) => {
+      ;
+      const drop = item.nextElementSibling;
+      if (drop.classList.contains('active')) {
+        item.classList.remove('active');
+        drop.classList.remove('active');
+      } else {
+        item.classList.add('active');
+        drop.classList.add('active');
+      }
+      
   });
-  closeBtn.addEventListener('click', () => {
-    cityContent.classList.add('hidden');
-  });
-  
+  })
+    
+
+  // const filterBtn = document.querySelector('.filter-open-btn .btn'),
+  //   filterForm = document.querySelector('.catalog__filter');
+  // filterBtn.addEventListener('click', () => {
+  //   console.log('click');
+  //   filterForm.classList.add('active');
+  // });
 
   if("#map"){
     ymaps.ready(init);
