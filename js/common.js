@@ -67,6 +67,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  const recomend = new Swiper('.recomend__slider', {
+    loop: false,
+    speed: 800,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.recomend__nav .swiper-button-next',
+      prevEl: '.recomend__nav .swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      575: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      }
+    }
+  });
   
   const news = new Swiper('.inews__slider', {
     loop: false,
@@ -141,6 +170,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
+  // tabs product
+  const tabsProduct = document.querySelectorAll('.product-tabs .tabs-item'),
+  tabsProductContent = document.querySelectorAll('.tabs-content .tab-block'),
+  tabsProductParent = document.querySelector('.product-tabs');
+
+  function hideTabProductContent() {
+  tabsProductContent.forEach(item => {
+  item.classList.remove('show', 'active');
+  });
+  tabsProduct.forEach(item => {
+  item.classList.remove('active');
+  });
+  }
+
+  function showTabProductContent(i = 0) {
+  tabsProductContent[i].classList.add('show', 'active');
+  tabsProduct[i].classList.add('active');
+  }
+
+  hideTabProductContent();
+  showTabProductContent();
+
+  tabsProductParent.addEventListener('click', (event) => {
+  const target = event.target;
+  if (target && target.classList.contains('tabs-item')) {
+  tabsProduct.forEach((item, i) => {
+    if (target == item) {
+      hideTabProductContent();
+      showTabProductContent(i);
+    }
+  });
+  }
+  });
+
+
+
+
+
+
+
   // header drop menu toggle
   const catalogToggler = document.querySelector('.navbar-toggler.catalog-btn');
   const dropMenu = document.querySelector('#catalog-menu');
@@ -212,9 +282,45 @@ document.addEventListener("DOMContentLoaded", () => {
         drop.classList.add('active');
       }
       
+    });
   });
-  })
-    
+  
+
+  // Инициализация превью слайдера
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
+	// задаем параметры
+	direction: 'vertical', // вертикальная прокрутка
+	slidesPerView: 3, // показывать по 3 превью
+	spaceBetween: 21, // расстояние между слайдами
+	navigation: false,
+	freeMode: true, // при перетаскивании превью ведет себя как при скролле
+	breakpoints: { // условия для разных размеров окна браузера
+		0: { // при 0px и выше
+			direction: 'horizontal', // горизонтальная прокрутка
+		},
+		768: { // при 768px и выше
+			direction: 'vertical', // вертикальная прокрутка
+		}
+	}
+});
+// Инициализация слайдера изображений
+const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
+	// задаем параметры
+	direction: 'horizontal', // вертикальная прокрутка
+	slidesPerView: 1, // показывать по 1 изображению
+	spaceBetween: 32, // расстояние между слайдами
+	mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  navigation: false,
+  pagination: {
+    el: ".slider__images .swiper-pagination",
+    clickable: true
+  },
+	grabCursor: true, // менять иконку курсора
+	thumbs: { // указываем на превью слайдер
+		swiper: sliderThumbs // указываем имя превью слайдера
+	},
+	
+}); 
 
   // const filterBtn = document.querySelector('.filter-open-btn .btn'),
   //   filterForm = document.querySelector('.catalog__filter');
@@ -332,7 +438,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }));
     }
   }
-
 
 
 
