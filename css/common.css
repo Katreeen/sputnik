@@ -557,6 +557,11 @@ input[type=radio].custom-radiobox:checked + label:after {background: linear-grad
       .tab-block{display: none;}
       .tab-block.active{display: block;}
 
+      .option-list{}
+        .option-item{display: flex; padding-bottom: 16px;}
+          .option-name{color: #838B94; width: 50%;}
+          .option-info{color: #4F4F4F; width: 50%;}
+
 
 
 
@@ -951,6 +956,9 @@ input[type=radio].custom-radiobox:checked + label:after {background: linear-grad
   .product-card-text{text-align: left;}
   .tabs-nav{flex-wrap: wrap; border-bottom: none;} 
   .tabs-item{width: 100%;    border-bottom: 1px solid #2AB346;}
+  .product__content{padding: 27px 20px 40px;}
+  .option-info{word-break: break-word; padding-left: 5px;}
+  .option-item{font-size: 14px;}
 }
 @media(max-width: 400px){
   
