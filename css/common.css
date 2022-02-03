@@ -101,6 +101,8 @@ button, .btn{text-decoration:none; cursor:pointer; text-align:center; -webkit-tr
 .btn-order:focus, .btn-order.focus { outline:0; background: url(../i/buy-white.svg)no-repeat #2AB346; border:none; box-shadow: none;}
 .btn-order:hover,.btn-order:focus:hover, .btn-order.focus:hover, .btn-order:not(:disabled):not(.disabled):active, .btn-order:not(:disabled):not(.disabled):active:focus, .btn-order:not(:disabled):not(.disabled).active:focus { color: #fff; border:none; box-shadow: none; background: url(../i/buy-white.svg)no-repeat #2AB346; background-position: 15px center; padding: 0 0 0 51px;}
 
+.btn-order.-order-icon{background: url(../i/order-white.svg)no-repeat #2AB346;  max-width: 195px; background-position: 15px center;}
+
 
 /* .btn-arrow{background: url(../i/btn-arrow-black.svg) #fff no-repeat center; padding: 0; border: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px;}
 .btn-arrow:hover, .btn-arrow:focus{background: url(../i/btn-arrow-white.svg) #E10922 no-repeat center; }
@@ -454,9 +456,12 @@ ul.ul li:last-child{padding-bottom: 0;}
 /*checkbox start*/
 input[type=checkbox].custom-checkbox, input[type=radio].custom-radiobox {display: none;}
 input[type=checkbox].custom-checkbox + label:before {content: ""; display: inline-block; width: 20px; height: 20px; background: #fff; border: 1px solid #7F8081; border-radius: 0; box-shadow: none; transition: color ease .3s; vertical-align: middle; margin-right: 16px;}
-input[type=radio].custom-radiobox + label:after{content: "";display: block; border: 3px solid #fff; box-shadow: 0px 0px 0px 1px #2AB346; border-radius: 50%; background: #fff; height: 20px; width: 20px; transition: color ease .3s;}
+input[type=radio].custom-radiobox + label:after{content: "";display: block; border: 3px solid #fff; box-shadow: 0px 0px 0px 1px #2AB346; border-radius: 50%; background: #fff; height: 20px; width: 20px; transition: color ease .3s; margin-right: 15px;}
 input[type=checkbox].custom-checkbox:checked + label:before {background: url(../i/check.svg)#2AB346 no-repeat center center; border: 1px solid #2AB346;}
-input[type=radio].custom-radiobox:checked + label:after {background: linear-gradient(93.81deg, #FA6528 0%, #F4851E 100%);}
+input[type=radio].custom-radiobox:checked + label:after {background: #2ab346;}
+.radio-inline{position: relative;}
+.radio-inline label{padding-left: 39px;}
+.radio-inline input[type=radio].custom-radiobox + label:after{position: absolute; left: 0; top: 0;}
 /*checkbox end*/
 
 .catalog{}
@@ -593,14 +598,26 @@ input[type=radio].custom-radiobox:checked + label:after {background: linear-grad
     .basket-result-row{padding-bottom: 10px;}
     .basket-result-row:last-child{border-top:1px solid #CACACA; padding-top: 14px; padding-bottom: 0;}
 
-.order-section{background: #fff; padding: 30px 40px;}
+.order-section{background: #fff; padding: 30px 40px; margin-bottom: 29px;}
+  .order-section-title{text-transform: uppercase; margin-bottom: 29px;}
+  .order-delivery{}
+  .order-group{margin-bottom: 25px;}
+  .order-city label{display: block; margin-bottom: 9px;}
+  .order-delivery .form-control{max-width: 245px; height: 45px;}
+  .radio-inline+.radio-inline{margin-top: 19px;}
+  .order-location{color: #282828;}
+  .location-more{display: block; margin-top: 45px; color: #282828;}
 
+  .user-col{padding-bottom: 17px;}
 
+.order-bottom{margin-bottom: 77px;}
+.order-result{}
+  .order-product{border: 1px solid #7F8081; padding: 20px;}
+    .order-product-title{line-height: 22px; margin-bottom: 16px;}
 
-
-
-
-
+  .cart-total{margin-top: 35px;}
+    .cart-total-line{display: flex; align-items: center; margin-bottom: 18px; justify-content: space-between;}
+    .cart-total-result{border-top: 1px solid #CACACA; padding-top: 28px;}
 
 
 
@@ -987,6 +1004,12 @@ input[type=radio].custom-radiobox:checked + label:after {background: linear-grad
   .basket__table { width: 800px; }
   .basket-item:after, .basket-item:before{width: 20px;}
   .basket-result-row div:last-child .basket-result-col{text-align: right;}
+  .radio-inline+.radio-inline{margin-top: 0;}
+  .radio-inline{margin-bottom: 19px;}
+  .-order-bottom-row{justify-content: center; text-align: center;}
+  .-order-bottom-row .btn{margin-bottom: 19px;}
+  .-order-bottom-row .policy{padding: 0 20px;}
+  .order-product-img{text-align: center;}
 }
 @media(max-width: 400px){
   

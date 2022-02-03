@@ -175,36 +175,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabsProduct = document.querySelectorAll('.product-tabs .tabs-item'),
   tabsProductContent = document.querySelectorAll('.tabs-content .tab-block'),
   tabsProductParent = document.querySelector('.product-tabs');
-
-  function hideTabProductContent() {
-  tabsProductContent.forEach(item => {
-  item.classList.remove('show', 'active');
-  });
-  tabsProduct.forEach(item => {
-  item.classList.remove('active');
-  });
-  }
-
-  function showTabProductContent(i = 0) {
-  tabsProductContent[i].classList.add('show', 'active');
-  tabsProduct[i].classList.add('active');
-  }
-
-  hideTabProductContent();
-  showTabProductContent();
-
-  tabsProductParent.addEventListener('click', (event) => {
-  const target = event.target;
-  if (target && target.classList.contains('tabs-item')) {
-  tabsProduct.forEach((item, i) => {
-    if (target == item) {
-      hideTabProductContent();
-      showTabProductContent(i);
+  if (tabsProduct.length>0) {
+    function hideTabProductContent() {
+      tabsProductContent.forEach(item => {
+        item.classList.remove('show', 'active');
+      });
+      tabsProduct.forEach(item => {
+        item.classList.remove('active');
+      });
     }
-  });
-  }
-  });
 
+    function showTabProductContent(i = 0) {
+      tabsProductContent[i].classList.add('show', 'active');
+      tabsProduct[i].classList.add('active');
+    }
+
+    hideTabProductContent();
+    showTabProductContent();
+
+    tabsProductParent.addEventListener('click', (event) => {
+      const target = event.target;
+      if (target && target.classList.contains('tabs-item')) {
+        tabsProduct.forEach((item, i) => {
+          if (target == item) {
+            hideTabProductContent();
+            showTabProductContent(i);
+          }
+        });
+      }
+    });
+  }
 
 
 
@@ -270,9 +270,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const catalogFilter = document.querySelector('.catalog__filter'),
     filterTitle = document.querySelectorAll('.filter-title');
-  filterTitle.forEach(item => {
+    filterTitle.forEach(item => {
     item.addEventListener('click', (e) => {
-      ;
       const drop = item.nextElementSibling;
       if (drop.classList.contains('active')) {
         item.classList.remove('active');
@@ -287,37 +286,35 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   // Инициализация превью слайдера
-const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
-	// задаем параметры
-	direction: 'vertical', // вертикальная прокрутка
-	slidesPerView: 3, // показывать по 3 превью
-	spaceBetween: 21, // расстояние между слайдами
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { 
+	direction: 'vertical',
+	slidesPerView: 3, 
+	spaceBetween: 21, 
 	navigation: false,
-	freeMode: true, // при перетаскивании превью ведет себя как при скролле
-	breakpoints: { // условия для разных размеров окна браузера
-		0: { // при 0px и выше
-			direction: 'horizontal', // горизонтальная прокрутка
+	freeMode: true,
+	breakpoints: {
+		0: { 
+			direction: 'horizontal',
 		},
-		768: { // при 768px и выше
-			direction: 'vertical', // вертикальная прокрутка
+		768: { 
+			direction: 'vertical',
 		}
 	}
 });
-// Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
-	// задаем параметры
-	direction: 'horizontal', // вертикальная прокрутка
-	slidesPerView: 1, // показывать по 1 изображению
-	spaceBetween: 32, // расстояние между слайдами
-	mousewheel: true, // можно прокручивать изображения колёсиком мыши
+
+const sliderImages = new Swiper('.slider__images .swiper-container', { 
+	direction: 'horizontal', 
+	slidesPerView: 1, 
+	spaceBetween: 32, 
+	mousewheel: true, 
   navigation: false,
   pagination: {
     el: ".slider__images .swiper-pagination",
     clickable: true
   },
-	grabCursor: true, // менять иконку курсора
-	thumbs: { // указываем на превью слайдер
-		swiper: sliderThumbs // указываем имя превью слайдера
+	grabCursor: true, 
+	thumbs: { 
+		swiper: sliderThumbs 
 	},
 	
 }); 
@@ -328,6 +325,25 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
   //   console.log('click');
   //   filterForm.classList.add('active');
   // });
+
+  const locationToggle = document.querySelector('.location-more'),
+  locationList = document.querySelectorAll('.order-location .radio-inline');
+
+  locationToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    locationList.forEach(item => {
+      if (item.classList.contains('-hidden')) {
+        item.classList.remove('-hidden');
+        item.classList.add('-show');
+      } else {
+        console.dir(item);
+      }
+    });
+
+  });
+
+
+
 
   if("#map"){
     ymaps.ready(init);
