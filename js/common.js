@@ -212,15 +212,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // header drop menu toggle
-  const catalogToggler = document.querySelector('.navbar-toggler.catalog-btn');
-  const dropMenu = document.querySelector('#catalog-menu');
+  const catalogToggler = document.querySelector('.header__navbar .navbar-toggler');
+  let dropMenu;
+
+  if (document.documentElement.clientWidth < 576) {
+    dropMenu = document.querySelector('#mobil-menu');
+  } else {
+    dropMenu = document.querySelector('#catalog-menu');
+  }
+  
   catalogToggler.addEventListener('click', () => {
     if (dropMenu.classList.contains('show')) {
       dropMenu.classList.remove('show');
       dropMenu.style.height = 0;
+      document.body.classList.remove('show-menu');
     } else {
       dropMenu.classList.add('show');
       dropMenu.style.height = `${dropMenu.scrollHeight}px`;
+      document.body.classList.add('show-menu');
     }
   });
 
@@ -326,26 +335,25 @@ const sliderImages = new Swiper('.slider__images .swiper-container', {
   //   filterForm.classList.add('active');
   // });
 
-  const locationToggle = document.querySelector('.location-more'),
-  locationList = document.querySelectorAll('.order-location .radio-inline');
+  // const locationToggle = document.querySelector('.location-more'),
+  // locationList = document.querySelectorAll('.order-location .radio-inline');
 
-  locationToggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    locationList.forEach(item => {
-      if (item.classList.contains('-hidden')) {
-        item.classList.remove('-hidden');
-        item.classList.add('-show');
-      } else {
-        console.dir(item);
-      }
-    });
-
-  });
-
+  // locationToggle.addEventListener('click', (e) => {
+  //   e.preventDefault();
+  //   locationList.forEach(item => {
+  //     if (item.classList.contains('-hidden')) {
+  //       item.classList.remove('-hidden');
+  //       item.classList.add('-show');
+  //     } else {
+  //       console.dir(item);
+  //     }
+  //   });
+  // });
 
 
 
-  if("#map"){
+
+  if(document.querySelector("#map")){
     ymaps.ready(init);
       var myMap; 
       function init () {
