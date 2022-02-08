@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Поддержка</title>
+  <title>Прайс-лист</title>
   <meta name="description" content="">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="libs/fancybox/fancybox.css" />
   <link rel="stylesheet" href="libs/scroll/simplebar.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
   <link rel="stylesheet" href="css/common.css">
 </head>
 
@@ -332,55 +333,126 @@
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Главная</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Поддержка</li>
+          <li class="breadcrumb-item active" aria-current="page">Прайс-лист</li>
         </ol>
       </div>
     </nav>
     <div class="section main__title">
       <div class="container">
-        <h1>Поддержка</h1>
+        <h1>Прайс-лист</h1>
       </div>
     </div>
-    <div class="main__content pt-4">
-      <div class="section ifeedback">
-          <div class="container">
-            <div class="ifeedback__wrap">
-              <div class="section__title -center">у вас остались вопросы?</div>
-              <div class="ifeedback__text -center">Оставьте свой вопрос и мы свяжемся с вами в ближайшее время</div>
-              <form action="" class="ifeedback__form">
-                <div class="row -ifeedback-row">
-                  <div class="col-md-4 -ifeedback-col">
-                    <label for="name" class="form-label -fs-12">Как к вам обращаться?</label>
-                    <input type="text" id="name" class="form-control" placeholder="">
-                  </div>
-                  <div class="col-md-4 -ifeedback-col">
-                    <label for="phone" class="form-label -fs-12">Номер телефона</label>
-                    <input type="text" id="phone" class="form-control" placeholder="">
-                  </div>
-                  <div class="col-md-4 -ifeedback-col">
-                    <label for="email" class="form-label -fs-12">E-mail</label>
-                    <input type="text" id="email" class="form-control" placeholder="">
-                  </div>
-                  <div class="col-md-8 -ifeedback-col">
-                    <label for="text" class="form-label -fs-12">Ваш вопрос</label>
-                    <textarea name="text" id="text" class="form-control"></textarea>
-                  </div>
-                  <div class="col-md-4 -ifeedback-col">
-                    <div class="ifeedback__btn">
-                      <button type="submit" class="btn btn-third">Отправить</button>
+    
+    <div class="main__content pt-0">
+      <div class="container">
+        <div class="section price pt-0">
+          <div class="row -price-row">
+            <div class="col-lg-6">
+              <div class="price-wrap">
+                <div class="price-list">
+                  <p class="price-text">Оптовые скидки действуют при заказе в квартал</p>
+                  <div class="row -price-list-row">
+                    <div class="col-6">
+                      <div class="price-item -star-1">
+                        <div class="price-ttl -fs-30">Опт 2</div>
+                        <div class="price-txt">от 5 000 до 50 000 ₽</div>
+                      </div>
                     </div>
-                    <div class="ifeedback__policy">
-                      <div class="-fs-12 policy">
-                        Нажимая кнопку «Отправить» вы даете согласие на <a href="#">обработку персональных данных</a>
+                    <div class="col-6">
+                      <div class="price-item -star-2">
+                        <div class="price-ttl -fs-30">Опт 3</div>
+                        <div class="price-txt">от 50 000 до 100 000 ₽</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="price-item -star-3">
+                        <div class="price-ttl -fs-30">Опт 4</div>
+                        <div class="price-txt">от 100 000 до 250 000 ₽</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="price-item -star-4">
+                        <div class="price-ttl -fs-30">Опт 5</div>
+                        <div class="price-txt">от 250 000 ₽ и выше</div>
                       </div>
                     </div>
                   </div>
                 </div>
-    
-    
-              </form>
+                <div class="price-download">
+                  <a href="#" class="btn btn-border -star-icon">Скачать</a>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col-lg-6 -col-documents">
+              <div class="documents">
+                <div class="section__title -fs-30">документы</div>
+                <div class="doc-text">Вы можете отметить необходимые документы и мы пришлём их на указанную в вашем аккаунте электронную почту</div>
+                <div class="documents-form">
+                  <form action="">
+                    <div class="row -form-row pb-2">
+                      <div class="col-5 col-sm-4">
+                        <input class="custom-checkbox" type="checkbox" value="" name="doc-1" id="doc-1">
+                        <label for="doc-1">УПД</label>
+                      </div>
+                      <div class="col-7 col-sm-8">
+                        <div class="calendar-range">
+                          <div class="row -calendar-row">
+                            <div class="col-sm-6 -range-col">
+                              <input type="text" name="range-start" class="input form-control datepicker-input" placeholder="DD.MM.YYYY">
+                            </div>
+                            <div class="col-sm-6 -range-col">
+                              <input type="text" name="range-end" class="input form-control datepicker-input" placeholder="DD.MM.YYYY">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row -form-row pb-2">
+                      <div class="col-5 col-sm-4">
+                        <input class="custom-checkbox" type="checkbox" value="" name="doc-2" id="doc-2">
+                        <label for="doc-2">Акт сверки</label>
+                      </div>
+                      <div class="col-7 col-sm-8">
+                        <div class="calendar-range">
+                          <div class="row -calendar-row">
+                            <div class="col-sm-6 -range-col">
+                              <input type="text" name="range-start" class="input form-control datepicker-input" placeholder="DD.MM.YYYY">
+                            </div>
+                            <div class="col-sm-6 -range-col">
+                              <input type="text" name="range-end" class="input form-control datepicker-input" placeholder="DD.MM.YYYY">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row -form-row pb-2">
+                      <div class="col-sm-4">
+                        <input class="custom-checkbox" type="checkbox" value="" name="doc-3" id="doc-3">
+                        <label for="doc-3">Другое</label>
+                      </div>
+                    </div>
+                    <div class="row -form-row pt-2">
+                      <div class="col-sm-6">
+                        <label for="doc-comm" class="-gray -fs-12">Комментарий</label>
+                        <textarea class="form-control" name="doc-comm" id="doc-comm" rows="1"></textarea>
+                      </div>
+                    </div>
+                    <div class="row -row-bottom pt-4 align-items-center">
+                      <div class="col-sm-4">
+                        <input type="submit" class="btn btn-border -order-icon">
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="policy -fs-12">Нажимая кнопку «Запросить» вы даете согласие на <a href="#">обработку персональных данных</a> </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
       </div>
     </div>
   </main>
@@ -470,7 +542,10 @@
       </form>
     </div>
   </div>
+  
+  
   <script src="libs/bootstrap/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
   <script src="libs/swiper/swiper-bundle.min.js"></script>
   <script src="libs/fancybox/fancybox.umd.js"></script>
   <script src="libs/scroll/simplebar.min.js"></script>

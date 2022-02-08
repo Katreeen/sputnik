@@ -356,7 +356,14 @@ const sliderImages = new Swiper('.slider__images .swiper-container', {
   //     }
   //   });
   // });
-
+  
+  
+  const elems = document.querySelectorAll('.calendar-range');
+  elems.forEach(elem => {
+    const rangepicker = new DateRangePicker(elem, {
+      'format': 'dd.mm.yyyy',
+    });
+  });
 
 
 
