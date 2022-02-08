@@ -213,25 +213,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // header drop menu toggle
   const catalogToggler = document.querySelector('.header__navbar .navbar-toggler');
+  const closeMenu = document.querySelector('.mobil-menu-close a');
   let dropMenu;
 
   if (document.documentElement.clientWidth < 576) {
     dropMenu = document.querySelector('#mobil-menu');
+    closeMenu.addEventListener('click', (e) => {
+      e.preventDefault();
+      closePopupMenu();
+    });
   } else {
     dropMenu = document.querySelector('#catalog-menu');
   }
-  
   catalogToggler.addEventListener('click', () => {
     if (dropMenu.classList.contains('show')) {
-      dropMenu.classList.remove('show');
-      dropMenu.style.height = 0;
-      document.body.classList.remove('show-menu');
+      closePopupMenu();
     } else {
       dropMenu.classList.add('show');
       dropMenu.style.height = `${dropMenu.scrollHeight}px`;
       document.body.classList.add('show-menu');
     }
   });
+  function closePopupMenu() {
+    dropMenu.classList.remove('show');
+    dropMenu.style.height = 0;
+    document.body.classList.remove('show-menu');
+  }
 
   // toggle search
   const togglerSearch = document.querySelector('.toggle-search'),

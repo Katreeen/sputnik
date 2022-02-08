@@ -653,10 +653,21 @@ input[type=radio].custom-radiobox:checked + label:after {background: #2ab346;}
 .b2b .navbar-light .navbar-toggler{color: #fff;}
 .b2b .navbar-nav{flex-direction: row; align-items: center;}
 .b2b .catalog-drop{left: 0; right: 0;}
-
+.b2b .fsocial{padding-top: 0;}
 /* mobil drop menu */
 .mobil-drop-menu{overflow-y: auto; padding-bottom: 53px;}
-.submenu{}
+.mobil-drop-top{display: flex; justify-content: flex-end; margin-bottom: 32px;}
+.show-menu .mobil-phone{margin-right: 47px;}
+  .show-menu .mobil-phone a{background: url(../i/icon-phone-mobil.svg)no-repeat; width: 25px; height: 27px; display: inline-block;}
+  .show-menu .mobil-menu-close a{background: url(../i/icon-close-mobil.svg)no-repeat; width: 22px; height: 21px; display: inline-block;}
+
+
+.submenu{padding-left: 0;}
+.mobil__user .mobil__login .icon-user{background: url(../i/icon-user-def.svg) no-repeat; width: 22px; height: 22px; display: inline-block;}
+.mobil__user .mobil__b2b .icon-user{background: url(../i/icon-user-b.svg)no-repeat; width: 22px; height: 22px; display: inline-block;}
+.mobil__user .icon-user{margin-right: 18px;}
+.user-menu{justify-content: space-between;}
+.mobil__copy{padding-top: 49px; color: #4F4F4F;}
 
 
 
@@ -898,7 +909,7 @@ input[type=radio].custom-radiobox:checked + label:after {background: #2ab346;}
   
   body.show-menu{overflow-y:hidden; height:100vh;}
   .-col-hmenu:not(.b2b .-col-hmenu){display: none;}
-}
-@media(max-width: 400px){
-  
+  .user-menu{margin: 0 -8px 12px; justify-content: center;}
+  .user-menu li{padding: 5px 8px;}
+  .b2b .footer-copy{padding-top: 12px; padding-bottom: 0; text-align: center;}
 }
