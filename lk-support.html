@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Мои заказы</title>
+  <title>Поддержка</title>
   <meta name="description" content="">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -332,199 +332,59 @@
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Главная</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Мои заказы</li>
+          <li class="breadcrumb-item active" aria-current="page">Поддержка</li>
         </ol>
       </div>
     </nav>
     <div class="section main__title">
       <div class="container">
-        <h1>Мои заказы</h1>
+        <h1>Поддержка</h1>
       </div>
     </div>
     <div class="main__content pt-4">
       <div class="container">
-        <div class="orders-top">
-          <div class="orders-top-col">
-            <a href="#" class="orders-favorite -fs-14">Избранное</a>
-          </div>
-          <div class="orders-top-col">
-            <select name="" id="" class="orders-sort form-select -fs-14">
-              <option value="">Сортировать</option>
-              <option value="data">По дате</option>
-              <option value="status">По статусу</option>
-            </select>
+        
+        
+        <div class="section ifeedback">
+          <div class="container">
+            <div class="ifeedback__wrap">
+              <div class="section__title -center">у вас остались вопросы?</div>
+              <div class="ifeedback__text -center">Оставьте свой вопрос и мы свяжемся с вами в ближайшее время</div>
+              <form action="" class="ifeedback__form">
+                <div class="row -ifeedback-row">
+                  <div class="col-md-4 -ifeedback-col">
+                    <label for="name" class="form-label -fs-12">Как к вам обращаться?</label>
+                    <input type="text" id="name" class="form-control" placeholder="">
+                  </div>
+                  <div class="col-md-4 -ifeedback-col">
+                    <label for="phone" class="form-label -fs-12">Номер телефона</label>
+                    <input type="text" id="phone" class="form-control" placeholder="">
+                  </div>
+                  <div class="col-md-4 -ifeedback-col">
+                    <label for="email" class="form-label -fs-12">E-mail</label>
+                    <input type="text" id="email" class="form-control" placeholder="">
+                  </div>
+                  <div class="col-md-8 -ifeedback-col">
+                    <label for="text" class="form-label -fs-12">Ваш вопрос</label>
+                    <textarea name="text" id="text" class="form-control"></textarea>
+                  </div>
+                  <div class="col-md-4 -ifeedback-col">
+                    <div class="ifeedback__btn">
+                      <button type="submit" class="btn btn-third">Отправить</button>
+                    </div>
+                    <div class="ifeedback__policy">
+                      <div class="-fs-12 policy">
+                        Нажимая кнопку «Отправить» вы даете согласие на <a href="#">обработку персональных данных</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+    
+              </form>
+            </div>
           </div>
         </div>
-        <div class="orders-table-wrap">
-          <table class="orders__table -fs-16">
-            <tbody>
-              <tr class="orders-header">
-                <th class="orders-cell"></th>
-                <th class="orders-cell">№ заказа</th>
-                <th class="orders-cell">Дата</th>
-                <th class="orders-cell">Кол-во</th>
-                <th class="orders-cell">Сумма</th>
-                <th class="orders-cell">Статус оплаты</th>
-                <th class="orders-cell"></th>
-                <th class="orders-cell"></th>
-              </tr>
-              <tr class="orders-item">
-                <td class="orders-cell">
-                  <div class="orders__fav">
-                    <a href="#" class="orders-fav-link -active"></a>
-                  </div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__num">ПРН00031554</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__data">14.02.2020</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__quantity">2</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-price">988,00 ₽</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-status">Не оплачен</div>
-                </td>
-                <td class="orders-cell">
-                  <a href="#" class="orders-download"></a>
-                </td>
-                <td class="orders-cell">
-                  <button class="btn btn-repeat orders-repeat">Повторить</button>
-                </td>
-              </tr>
-              <tr class="orders-item">
-                <td class="orders-cell">
-                  <div class="orders__fav">
-                    <a href="#" class="orders-fav-link"></a>
-                  </div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__num">ПРН00031554</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__data">14.02.2020</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__quantity">2</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-price">988,00 ₽</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-status">Не оплачен</div>
-                </td>
-                <td class="orders-cell">
-                  <a href="#" class="orders-download"></a>
-                </td>
-                <td class="orders-cell">
-                  <button class="btn btn-repeat orders-repeat">Повторить</button>
-                </td>
-              </tr>
-              <tr class="orders-item">
-                <td class="orders-cell">
-                  <div class="orders__fav">
-                    <a href="#" class="orders-fav-link"></a>
-                  </div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__num">ПРН00031554</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__data">14.02.2020</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__quantity">2</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-price">988,00 ₽</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-status">Не оплачен</div>
-                </td>
-                <td class="orders-cell">
-                  <a href="#" class="orders-download"></a>
-                </td>
-                <td class="orders-cell">
-                  <button class="btn btn-repeat orders-repeat">Повторить</button>
-                </td>
-              </tr>
-              <tr class="orders-item">
-                <td class="orders-cell">
-                  <div class="orders__fav">
-                    <a href="#" class="orders-fav-link"></a>
-                  </div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__num">ПРН00031554</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__data">14.02.2020</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__quantity">2</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-price">988,00 ₽</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-status">Не оплачен</div>
-                </td>
-                <td class="orders-cell">
-                  <a href="#" class="orders-download"></a>
-                </td>
-                <td class="orders-cell">
-                  <button class="btn btn-repeat orders-repeat">Повторить</button>
-                </td>
-              </tr>
-              <tr class="orders-item">
-                <td class="orders-cell">
-                  <div class="orders__fav">
-                    <a href="#" class="orders-fav-link"></a>
-                  </div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__num">ПРН00031554</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__data">14.02.2020</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders__quantity">2</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-price">988,00 ₽</div>
-                </td>
-                <td class="orders-cell">
-                  <div class="orders-status">Не оплачен</div>
-                </td>
-                <td class="orders-cell">
-                  <a href="#" class="orders-download"></a>
-                </td>
-                <td class="orders-cell">
-                  <button class="btn btn-repeat orders-repeat">Повторить</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <nav class="page-navigation">
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Ближе</a></li>
-            <li class="page-item"><a class="page-link active" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item"><a class="page-link" href="#">6</a></li>
-            <li class="page-item"><a class="page-link" href="#">7</a></li>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">Дальше</a></li>
-          </ul>
-        </nav>
 
       </div>
     </div>
