@@ -334,28 +334,6 @@ const sliderImages = new Swiper('.slider__images .swiper-container', {
 	},
 	
 }); 
-
-  // const filterBtn = document.querySelector('.filter-open-btn .btn'),
-  //   filterForm = document.querySelector('.catalog__filter');
-  // filterBtn.addEventListener('click', () => {
-  //   console.log('click');
-  //   filterForm.classList.add('active');
-  // });
-
-  // const locationToggle = document.querySelector('.location-more'),
-  // locationList = document.querySelectorAll('.order-location .radio-inline');
-
-  // locationToggle.addEventListener('click', (e) => {
-  //   e.preventDefault();
-  //   locationList.forEach(item => {
-  //     if (item.classList.contains('-hidden')) {
-  //       item.classList.remove('-hidden');
-  //       item.classList.add('-show');
-  //     } else {
-  //       console.dir(item);
-  //     }
-  //   });
-  // });
   
   
   const elems = document.querySelectorAll('.calendar-range');
@@ -365,6 +343,23 @@ const sliderImages = new Swiper('.slider__images .swiper-container', {
     });
   });
 
+  // const dataLink = document.querySelectorAll('.more-info');
+  const dataInfo = document.querySelectorAll('.data-info');
+  dataInfo.forEach(item => {
+    const dataLink = item.querySelector('.more-info');
+    const moreText = item.querySelector('.more-text');
+    dataLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (moreText.classList.contains('show')) {
+        moreText.classList.remove('show');
+        dataLink.textContent = 'Показать реквизиты';
+      } else {
+        moreText.classList.add('show');
+        dataLink.textContent = 'Скрыть реквизиты';
+      }
+      
+    });
+  });
 
 
   if(document.querySelector("#map")){
